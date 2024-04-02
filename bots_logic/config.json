@@ -1,0 +1,25 @@
+
+
+{
+
+
+"bots": [
+
+
+    {
+                "TOKEN_CONTENT" : "", 
+                "url_channel" : "" , 
+                "id_channel" : null , 
+                "TOKEN_SPAM" : "", 
+                "channel_name" : "", 
+                "period" : null, 
+                "add_url_chanel" : "", 
+                "is_note_content" : null
+    }
+
+     
+
+    ]}
+
+
+
