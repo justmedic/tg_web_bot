@@ -266,7 +266,7 @@ class TelewebBots():
             Рассылка файлов (видосов и фотографий)
             """
 
-            attempt = 0                 # да это тупой сраный вонючий меркзкий костыль но мне пофег в принципе да
+            attempt = 0                 # да это костыль 
             while attempt < 2:          # нужен для обработки исключений когда директория есть, но доступа через атрибут класса к ней нет тк не была вызвана функция инициализации директорий и бд
                 try:
                     files = [f for f in os.listdir(self.bot_content_dir) if os.path.isfile(os.path.join(self.bot_content_dir, f))]
@@ -384,26 +384,3 @@ class TelewebBots():
 
 
 
-
-# # TESTING
-
-
-
-
-# async def main():
-
-#     with open('config.json', 'r', encoding='utf-8') as file:
-#         config = json.load(file)
-
-
-#     bots_tasks = []
-#     for bot_config in config['bots']:
-#         bot_run = TelewebBots(**bot_config)
-#         bots_tasks.append(bot_run.run_bot_content())
-#         bots_tasks.append(bot_run.run_spam_bot())
-    
-
-#     await asyncio.gather(*bots_tasks)
-
-# if __name__ == '__main__':
-#     asyncio.run(main())
